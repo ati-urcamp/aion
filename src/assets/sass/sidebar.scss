@@ -1,0 +1,28 @@
+.sidebar-list {
+  .v-list__tile__action {
+    text-align: center;
+    justify-content: center;
+
+    .v-icon {
+      font-size: 18px;
+    }
+  }
+
+  .v-list__tile {
+    padding: 0;
+
+    &.v-list__tile--active {
+      background-color: rgba(0, 0, 0, 0.04);
+    }
+  }
+
+  .v-list__group__items {
+    .v-list__tile__action {
+      padding-left: 25px;
+    }
+
+    .v-list__tile__title {
+      padding-left: 10px;
+    }
+  }
+}

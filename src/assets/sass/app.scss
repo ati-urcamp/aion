@@ -1,0 +1,273 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+a, a:hover {
+  outline: none;
+}
+
+.sidebar-logo {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 0;
+
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 60%;
+  }
+}
+
+.main-content {
+  &.-not-logged {
+    .main-content-container {
+      width: 100%;
+      max-width: none;
+      padding: 0;
+    }
+  }
+
+  .main-content-container {
+    display: flex;
+    min-height: 100%;
+  }
+
+  .page-content {
+    flex: 1;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    > .page-header-content {
+      > .breadcrumbs {
+        padding: 0 0 10px 0;
+      }
+
+      .page-title {
+        font-size: 30px;
+        font-weight: 200;
+        margin: 0;
+        padding: 0 0 15px 0;
+        letter-spacing: -0.02em;
+        color: #333;
+      }
+    }
+  }
+}
+
+.flex-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-content {
+  .list-title {
+    padding: 15px 0 10px;
+  }
+
+  .list-total-records {
+    line-height: 48px;
+  }
+}
+
+.list-component {
+  .list-filters {
+    .v-expansion-panel__header {
+      padding: 5px 12px !important;
+    }
+  }
+
+  .list-filters-card {
+    background-color: #f4f4f4;
+    width: 100%;
+
+    .v-card__title {
+      padding: 8px 16px;
+    }
+
+    .v-card__text {
+      padding: 0;
+
+      .list-filters-container {
+        padding: 10px;
+      }
+    }
+  }
+
+  .v-datatable {
+    thead tr th:not(.btn-actions) {
+      text-align: left;
+    }
+
+    .list-table-nowrap {
+      width: 1px;
+      white-space: nowrap;
+
+      .btn-actions {
+        text-align: center;
+
+        .v-btn {
+          min-width: 40px;
+          width: 40px;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.child-card {
+  border-radius: 0;
+  box-shadow: none;
+
+  &-title {
+    margin: 0 -16px;
+    padding: 16px 32px;
+  }
+
+  .v-datatable {
+    th:not(.column-action) {
+      text-align: left;
+    }
+
+    .v-table-nowrap {
+      width: 1px;
+      white-space: nowrap;
+    }
+
+    .v-table-actions {
+      text-align: center;
+    }
+  }
+}
+
+.duracao-tarefa {
+  background-color: #576e65;
+  color: #fff;
+  border: 1px solid #576e65;
+  font-weight: bold;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+}
+
+.duracao-tarefa.small {
+  border-radius: 2px;
+  padding: 2px 4px;
+  font-size: 11px;
+  font-weight: normal;
+  height: auto;
+  line-height: 1;
+  display: inline-block;
+}
+
+.d-inline-block {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.lh-small {
+  line-height: 1.25;
+}
+
+.v-swatches-form-group {
+  position: relative;
+  margin-top: 4px;
+  padding-top: 18px;
+}
+
+.v-swatches-form-label {
+  position: absolute;
+  left: -4px;
+  right: auto;
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 16px;
+  transform: translateY(-24px) scale(0.75);
+  height: 20px;
+  line-height: 20px;
+}
+
+.v-swatches-label {
+  display: block;
+  width: 21px;
+  height: 21px;
+  border-radius: 5px;
+}
+
+.tarefa-board {
+  .card-inner-wrapper {
+    position: relative;
+    padding-left: 6px;
+  }
+
+  .card-inner-border {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    bottom: -10px;
+    width: 6px;
+  }
+}
+
+.v-list--two-line .v-list__tile {
+  height: auto !important;
+  min-height: 60px;
+}
+
+.tarefa-timesheets {
+
+  .v-list__tile__content {
+    padding: 10px 0;
+    max-width: 85%;
+
+    .v-list__tile__title {
+      height: auto !important;
+      line-height: normal !important;
+      white-space: normal;
+      text-overflow: initial;
+      overflow: auto;
+    }
+
+    .v-list__tile__sub-title {
+      white-space: pre-wrap;
+      text-overflow: initial;
+      padding-right: 20px;
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.checklist-items {
+  .v-list__tile {
+    height: auto !important;
+    min-height: 50px;
+  }
+}
+
+.checklist-progress {
+  padding-top: 15px;
+
+  .v-progress-linear {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+}
+
+.iframe-pdf {
+  overflow: hidden;
+
+  iframe {
+    display: block;
+    width: 100% !important;
+    height: 50vh;
+    border: 1px solid #ddd;
+  }
+}

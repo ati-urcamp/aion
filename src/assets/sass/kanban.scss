@@ -1,0 +1,186 @@
+$ease-out: all .3s cubic-bezier(0.23, 1, 0.32, 1);
+
+ul.drag-list, ul.drag-inner-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.drag-inner-list {
+  padding: 10px;
+}
+
+.drag-container-wrapper {
+  position: relative;
+  flex-grow: 1;
+}
+
+.drag-container {
+  margin: 0;
+  padding: 20px 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  @media (max-width: 690px) {
+    overflow-x: hidden;
+  }
+
+  @media (min-width: 691px) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.drag-list {
+  display: flex;
+  //align-items: flex-start;
+  height: 100%;
+
+  @media (max-width: 690px) {
+    display: block;
+  }
+}
+
+.drag-column {
+  flex: 1;
+  margin: 0 0 0 10px;
+  position: relative;
+  background: #ededed;
+  overflow: hidden;
+  min-width: 280px;
+  //max-width: 280px;
+  display: flex;
+  flex-direction: column;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  @media (max-width: 690px) {
+    margin: 0 0 20px 0;
+    min-width: auto;
+    max-width: none;
+  }
+
+  h2 {
+    font-size: 0.8rem;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+}
+
+.drag-column-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background: #3b5047;
+  color: #fff;
+  border-bottom: 3px solid #909e48;
+  min-height: 40px;
+
+  h2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.drag-inner-list-wrapper {
+  flex: 1 1 auto;
+  padding: 0;
+  overflow-y: auto;
+  min-height: 0;
+  //margin-bottom: 10px;
+}
+
+.drag-inner-list {
+  min-height: 125px;
+  color: #000;
+}
+
+.drag-item {
+  padding: 10px;
+  margin: 10px 0 0 0;
+  min-height: 80px;
+  background: #fff;
+  transition: $ease-out;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &.is-moving {
+    transform: scale(1.25);
+    background: rgba(#fff, 0.7);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+  }
+}
+
+.drag-header-more {
+  cursor: pointer;
+}
+
+.drag-options {
+  position: absolute;
+  top: 44px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: $ease-out;
+
+  &.active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  &-label {
+    display: block;
+    margin: 0 0 5px 0;
+
+    input {
+      opacity: 0.6;
+    }
+
+    span {
+      display: inline-block;
+      font-size: 0.9rem;
+      font-weight: 400;
+      margin-left: 5px;
+    }
+  }
+}
+
+/* Dragula CSS  */
+
+.gu-mirror {
+  position: fixed !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+  opacity: 0.8;
+  list-style-type: none;
+}
+
+.gu-hide {
+  display: none !important;
+}
+
+.gu-unselectable {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+.gu-transit {
+  opacity: 0.2;
+}

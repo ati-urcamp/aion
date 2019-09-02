@@ -1,0 +1,7 @@
+export const VALIDATION_REQUIRED = 'Esse campo é obrigatório'
+export const VALIDATION_EMAIL = 'E-mail inválido'
+export const VALIDATION_INVALID = 'Esse campo está com valor inválido'
+export const VALIDATION_MINLENGTH = 'Esse campo precisa um número mínimo de caracteres: '
+export const VALIDATION_MAXLENGTH = 'Esse campo aceita um número máximo de caracteres: '
+export const VALIDATION_SAMEPASSWORD = 'Esse campo tem de ser igual ao da senha'
+export const VALIDATION_CPF = 'CPF inválido'
