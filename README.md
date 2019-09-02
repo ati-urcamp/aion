@@ -2,7 +2,7 @@
 
 SPA do Aion usando o Vue.js 2 como base
 
-API do projeto [aqui](http://github.com/urcamp/aion-api)
+API do projeto [aqui](http://github.com/ati-urcamp/aion-api)
 
 Sequência para instalação
 
